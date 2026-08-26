@@ -1,0 +1,21 @@
+AIspamclassifier/
+│
+├── datasets/
+│   └── spam_and_ham_emails/
+│
+├── models/
+│   ├── spam_model.pkl
+│   └── vectorizer.pkl
+│
+├── results/
+│   ├── confusion_matrix.png
+│   └── model_comparison.csv
+│
+├── dataloader.py
+├── preprocessing.py
+├── model.py
+├── app.py
+│
+├── requirements.txt
+├── README.md
+└── .gitignore
