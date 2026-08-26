@@ -318,8 +318,7 @@ REST API
 Web Application
 📈 Learning Outcomes
 
-This project demonstrates practical experience with:
-
+This project demonstrates practical experience with
 Python
 File handling
 Modules
@@ -361,32 +360,32 @@ Error handling
 Project organization
 🧠 Key Concepts Demonstrated
 NLP
- │
- ├── Text Cleaning
- ├── Tokenization
- ├── TF-IDF
- └── N-Grams
-        │
-        ▼
+ 
+ Text Cleaning
+ Tokenization
+  TF-IDF
+ N-Grams
+      
+  
 Machine Learning
- │
- ├── Naive Bayes
- ├── Logistic Regression
- └── SVM
-        │
-        ▼
+ 
+  Naive Bayes
+ Logistic Regression
+  SVM
+        
+        
 Evaluation
- │
- ├── Precision
- ├── Recall
- ├── F1
- └── Confusion Matrix
+ 
+  Precision
+ Recall
+  F1
+ Confusion Matrix
         │
         ▼
 Application
- │
- └── Tkinter GUI
-💼 CV / Resume Description
+ 
+  Tkinter GUI
+ CV / Resume Description
 Short Version
 
 Spam Shield — AI Email Spam Classifier
