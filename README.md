@@ -45,7 +45,7 @@ Recall
 F1-score
 Confusion Matrix
 
-The primary goal is not simply high accuracy, but achieving a strong balance between precision and recall, which is especially important for spam detection.
+
 
 🧪 Dataset
 
@@ -65,101 +65,11 @@ Class	Number of Emails
 🔴 Spam	501
 Total	3,052
 
-Class distribution:
 
-Ham
-████████████████████████████████████████ 2551
-
-Spam
-████████                             501
 
 The dataset is split into training and testing subsets while preserving the class distribution.
 
-🏗️ Project Architecture
-                    ┌─────────────────────┐
-                    │   Email Dataset     │
-                    └──────────┬──────────┘
-                               │
-                               ▼
-                    ┌─────────────────────┐
-                    │ Data Preprocessing  │
-                    └──────────┬──────────┘
-                               │
-                               ▼
-                    ┌─────────────────────┐
-                    │     TF-IDF +        │
-                    │      N-Grams        │
-                    └──────────┬──────────┘
-                               │
-                               ▼
-              ┌────────────────────────────────┐
-              │     Model Experimentation      │
-              │                                │
-              │  • Naive Bayes                 │
-              │  • Logistic Regression         │
-              │  • Linear SVM / SVC             │
-              └───────────────┬────────────────┘
-                              │
-                              ▼
-                    ┌─────────────────────┐
-                    │ Model Evaluation    │
-                    │                     │
-                    │ Precision           │
-                    │ Recall              │
-                    │ F1 Score            │
-                    └──────────┬──────────┘
-                               │
-                               ▼
-                    ┌─────────────────────┐
-                    │  Best ML Model      │
-                    └──────────┬──────────┘
-                               │
-                               ▼
-                    ┌─────────────────────┐
-                    │ Saved Model +       │
-                    │ Vectorizer          │
-                    └──────────┬──────────┘
-                               │
-                               ▼
-                    ┌─────────────────────┐
-                    │    Tkinter GUI      │
-                    └──────────┬──────────┘
-                               │
-                               ▼
-                         SPAM / HAM
-📂 Project Structure
-AIspamclassifier/
-│
-├── datasets/
-│   └── spam_and_ham_emails/
-│
-├── models/
-│   ├── spam_model.pkl
-│   └── vectorizer.pkl
-│
-├── results/
-│   ├── confusion_matrix.png
-│   └── model_comparison.csv
-│
-├── dataloader.py
-├── preprocessing.py
-├── model.py
-├── app.py
-│
-├── requirements.txt
-├── README.md
-└── .gitignore
-File Responsibilities
-File	Purpose
-dataloader.py	Loads and organizes the email dataset
-preprocessing.py	Cleans and prepares email text
-model.py	Trains and evaluates ML models
-app.py	Runs the Tkinter desktop application
-models/	Stores trained ML artifacts
-results/	Stores evaluation results and visualizations
-requirements.txt	Contains required Python packages
-README.md	Project documentation
-🔬 Machine Learning Pipeline
+
 1. Data Collection
 
 Spam and legitimate email examples are collected from the Apache SpamAssassin public datasets.
@@ -185,63 +95,8 @@ https://example.com
 
 The preprocessing stage transforms the raw message into cleaner textual data.
 
-Depending on the configuration, preprocessing can include:
 
-Raw Email
-   ↓
-Header Handling
-   ↓
-Lowercasing
-   ↓
-URL Normalization
-   ↓
-Number Normalization
-   ↓
-Punctuation Removal
-   ↓
-Whitespace Cleaning
-   ↓
-Clean Text
-🧮 Feature Engineering
 
-Machine Learning algorithms cannot directly understand raw text.
-
-Therefore, emails must be converted into numerical representations.
-
-TF-IDF
-
-The project uses TF-IDF (Term Frequency–Inverse Document Frequency) to represent email text numerically.
-
-TF-IDF gives greater importance to words that are informative within the dataset while reducing the influence of extremely common terms.
-
-Conceptually:
-
-Email
-  ↓
-Words
-  ↓
-Vocabulary
-  ↓
-TF-IDF Scores
-  ↓
-Numerical Feature Vector
-🔤 N-Grams
-
-The classifier can use both individual words and word combinations.
-
-Unigrams
-free
-money
-offer
-click
-Bigrams
-free money
-click here
-limited offer
-Trigrams
-claim your prize
-
-Using n-grams allows the classifier to capture contextual phrases commonly associated with spam.
 
 🤖 Models Evaluated
 
@@ -304,57 +159,7 @@ F1 = 2 × (Precision × Recall)
 
 For this project, F1-score is especially useful because both false positives and false negatives matter.
 
-🎯 Why Accuracy Alone Isn't Enough
 
-Consider a hypothetical dataset:
-
-950 Ham
-50 Spam
-
-A terrible model could classify every email as Ham:
-
-Accuracy = 95%
-
-That sounds impressive.
-
-But:
-
-Spam detected = 0 / 50
-
-The model is useless for its intended purpose.
-
-Therefore, Spam Shield focuses on:
-
-                 ┌─────────────┐
-                 │ Spam Shield │
-                 └──────┬──────┘
-                        │
-            ┌───────────┼───────────┐
-            ▼           ▼           ▼
-       Precision      Recall      F1
-🖥️ User Interface
-
-The application provides a desktop interface built using Tkinter.
-
-The intended workflow is:
-
-┌──────────────────────────────────────┐
-│            🛡️ SPAM SHIELD            │
-│                                      │
-│      AI-Powered Email Detection      │
-│                                      │
-│ ┌──────────────────────────────────┐ │
-│ │ Paste your email here...         │ │
-│ │                                  │ │
-│ │                                  │ │
-│ └──────────────────────────────────┘ │
-│                                      │
-│          [ CHECK EMAIL ]             │
-│                                      │
-│          🚨 SPAM DETECTED            │
-│                                      │
-│          [ CLEAR ]                   │
-└──────────────────────────────────────┘
 
 The GUI separates the user interface from the underlying ML pipeline.
 
@@ -591,26 +396,7 @@ Technical Version
 
 Built an end-to-end email spam classification pipeline using Python, Scikit-learn, TF-IDF, n-gram feature engineering, and Support Vector Machines. Implemented preprocessing, stratified train/test evaluation, model benchmarking, and performance analysis using precision, recall, F1-score, and confusion matrices. Serialized the trained model and integrated it with a Tkinter GUI for interactive spam detection.
 
-🏆 Project Highlights
-┌──────────────────────────────────────────────┐
-│                 SPAM SHIELD                  │
-├──────────────────────────────────────────────┤
-│                                              │
-│  📧 3,052 Email Samples                     │
-│                                              │
-│  🧠 NLP + Machine Learning                  │
-│                                              │
-│  🔤 TF-IDF + N-Grams                         │
-│                                              │
-│  🤖 SVM Classification                       │
-│                                              │
-│  📊 Precision / Recall / F1                  │
-│                                              │
-│  🖥️ Tkinter Desktop Application             │
-│                                              │
-│  💾 Serialized ML Model                      │
-│                                              │
-└──────────────────────────────────────────────┘
+
 📜 Dataset & Attribution
 
 This project uses the publicly available Apache SpamAssassin public email corpus for educational and machine-learning experimentation.
