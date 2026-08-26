@@ -57,8 +57,11 @@ The dataset contains both legitimate and spam messages.
 
 After processing the dataset, the current dataset contains:
 
-Class	Number of Emails
+Class	Number of Emails 
+
+
 🟢 Ham	2,551
+
 🔴 Spam	501
 Total	3,052
 
