@@ -276,116 +276,97 @@ Spam evolves continuously, so a real-world classifier must evolve with it.
 
 🚀 Future Improvements
 
-The project can be extended in several directions.
+The project can be extended in several directions. 
+Advanced NLP,
+Word embeddings,
+Word2Vec,
+GloVe,
+FastText,
+Transformer-based embeddings,
+BERT-based classification ,
+Advanced Detection,
+Phishing URL detection,
+Malicious attachment detection,
+Email header analysis,
+Sender/domain reputation,
+HTML structure analysis,
 
-🔹 Advanced NLP
-Word embeddings
-Word2Vec
-GloVe
-FastText
-Transformer-based embeddings
-BERT-based classification
-🔹 Advanced Detection
-Phishing URL detection
-Malicious attachment detection
-Email header analysis
-Sender/domain reputation
-HTML structure analysis
-🔹 Machine Learning
-Hyperparameter optimization
-Cross-validation
-Ensemble learning
-Probability calibration
-Model explainability
-🔹 Application
-Drag-and-drop .eml files
-Email file upload
-Batch classification
-Prediction history
-Statistics dashboard
-Export predictions to CSV
-Confidence visualization
-🔹 Deployment
+ 
+ Deployment
 
 The application could eventually be converted into:
 
 Tkinter Desktop App
-        ↓
+        
 Flask / FastAPI
-        ↓
+        
 REST API
-        ↓
+        
 Web Application
 📈 Learning Outcomes
 
 This project demonstrates practical experience with
-Python
-File handling
-Modules
-Functions
-Object-oriented concepts
-Exception handling
-Data Science
-Pandas
-NumPy
-Data cleaning
-Dataset exploration
-Train/test splitting
-NLP
-Text preprocessing
-Tokenization
-Bag-of-Words
-TF-IDF
-N-grams
-Sparse matrices
-Machine Learning
-Supervised learning
-Binary classification
-Naive Bayes
-Logistic Regression
-Support Vector Machines
-Model comparison
-Hyperparameter selection
-Evaluation
-Accuracy
-Precision
-Recall
-F1-score
-Confusion matrix
-Software Development
-Model serialization
-Modular Python architecture
-Tkinter GUI development
-Error handling
+Python ,
+File handling ,
+Modules ,
+Functions ,
+Object-oriented concepts ,
+Exception handling ,
+Data Science ,
+Pandas ,
+NumPy ,
+Data cleaning ,
+Dataset exploration ,
+Train/test splitting ,
+NLP ,
+Text preprocessing ,
+Tokenization ,
+Bag-of-Words ,
+TF-IDF,
+N-grams,
+Sparse matrices,
+Machine Learning,
+Supervised learning,
+Binary classification,
+Naive Bayes,
+Logistic Regression,
+Support Vector Machines,
+Model comparison,
+Hyperparameter selection,
+Evaluation,
+Accuracy,
+Precision,
+Recall,
+F1-score,
+Confusion matrix,
+Software Development,
+Model serialization,
+Modular Python architecture,
+Tkinter GUI development,
+Error handling,
 Project organization
-🧠 Key Concepts Demonstrated
+
+
+
+Key Concepts Demonstrated
+
+
 NLP
- 
- Text Cleaning
- Tokenization
-  TF-IDF
- N-Grams
-      
-  
-Machine Learning
- 
-  Naive Bayes
- Logistic Regression
-  SVM
-        
-        
-Evaluation
- 
-  Precision
- Recall
-  F1
- Confusion Matrix
-        │
-        ▼
-Application
- 
-  Tkinter GUI
- CV / Resume Description
+ Text Cleaning,
+ Tokenization,
+ TF-IDF,
+ N-Grams,
+ Machine Learning,
+ Naive Bayes,
+ Logistic Regression,
+ SVM ,
+ Evaluation,
+ Precision,
+ Recall,
+ F1,
+ Confusion Matrix,
+ Application,
+ Tkinter GUI,
 Short Version
 
 Spam Shield — AI Email Spam Classifier
