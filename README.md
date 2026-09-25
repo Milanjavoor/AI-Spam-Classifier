@@ -165,7 +165,7 @@ The GUI separates the user interface from the underlying ML pipeline.
 
 ⚙️ Installation
 1. Clone the repository
-git clone https://github.com/YOUR_USERNAME/AIspamclassifier.git
+git clone https://github.com/Milanjavoor/AI-Spam-Classifier.git
 
 Move into the project:
 
